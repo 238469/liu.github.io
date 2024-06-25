@@ -1,0 +1,7 @@
+rul,name
+script|on.*=|javascript,xss-inject
+union\S+select|updatexml|database|mysql\.innodb_index_stats|information.*|load_file,sql-inject
+gopher://|dict://|file://,ssrf
+ftp://|php://|data://|\.\./,include
+eval|system|passthru|shell_exec|exec|preg_replace|assert|base64|\|\|\||;|call_user_func|create_function|array_map|call_user_func_array|array_map|array_filter|usort|uasort|preg_replace|popen|proc_open,rce-inject
+phar://|\{.*\}|%7b.*%7d,php-serialize

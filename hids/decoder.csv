@@ -1,0 +1,5 @@
+decoder,logname
+(\d+\.\d+\.\d+\.\d+).+\[(.+) \+0800\].+?"(.*?)"\s+(\d+),access
+.*Query(.*),mysql
+.*\[client\s(.*):\d+\].*mod_dumpio.*dumpio_in\s\(data-HEAP\):\s(.*),errlog
+Connect\s+Access denied for user '\S+'@'(\S+)',mysqlcoonct
