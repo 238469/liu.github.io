@@ -1,4 +1,4 @@
-![image](https://github.com/238469/liu.github.io/assets/126778520/b0c72bd9-a340-4f1e-9620-7f074f9a41d1)    # fastjson代码审计
+# fastjson代码审计
 
 为啥会出现命令执行
 
