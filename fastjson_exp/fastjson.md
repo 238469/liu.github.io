@@ -104,7 +104,7 @@ public class demo {
 
 如果需要将私有属性反序列化时，就可以调用parseObject方法指定Feature.SupportNonPublicField参数.
 
-## 2 利用链分析
+## 2 com.sun.rowset.JdbcRowSetImpl利用链分析
 
 终点是这里执行了lookup函数然后这个getDatasourceName是可控的
 
