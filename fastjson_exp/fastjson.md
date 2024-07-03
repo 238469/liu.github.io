@@ -1,4 +1,4 @@
-# fastjson代码审计
+![image](https://github.com/238469/liu.github.io/assets/126778520/b0c72bd9-a340-4f1e-9620-7f074f9a41d1)    # fastjson代码审计
 
 为啥会出现命令执行
 
@@ -85,7 +85,8 @@ public class demo {
 }
 ```
 
-![image-20240701092733610](D:\图片存放位置\image-20240701092733610.png)
+![image](https://github.com/238469/liu.github.io/assets/126778520/51a83004-e75e-431a-8a51-5294c19ed5c0)
+
 
 方式一调用了parseObject方法将json数据反序列化成java对象，并且在反序列化过程中会调用对象的setter和getter方法。
 
@@ -107,15 +108,18 @@ public class demo {
 
 终点是这里执行了lookup函数然后这个getDatasourceName是可控的
 
-![image-20240703095513267](D:\图片存放位置\image-20240703095513267.png)
+![image](https://github.com/238469/liu.github.io/assets/126778520/7223ecd8-6261-4a7d-9a5a-e338def97b69)
+
 
 由于fastjson会自动调用setter方法所以这个是可控的·
 
-![image-20240703095736802](D:\图片存放位置\image-20240703095736802.png)
+![image](https://github.com/238469/liu.github.io/assets/126778520/05818798-2c7e-4c36-affe-aeb7ed2d17dd)
+
 
 现在我们需要去找谁调用了connet发现这个方法调用了并且会自动调用
 
-![image-20240703095914191](D:\图片存放位置\image-20240703095914191.png)
+![image](https://github.com/238469/liu.github.io/assets/126778520/02e2923f-31f4-4d5d-9965-32bc018f4166)
+
 
 编写exp
 
